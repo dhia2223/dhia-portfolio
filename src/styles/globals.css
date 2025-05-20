@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* Navbar Base Styles */
+    .navbar {
+        @apply sticky top-0 z-50 bg-light/80 dark:bg-dark/80 backdrop-blur-sm shadow-sm;
+    }
+
+    .navbar-container {
+        @apply container mx-auto px-4 py-4 flex justify-between items-center;
+    }
+
+    .navbar-logo {
+        @apply text-xl font-bold text-primary dark:text-primary-dark hover:opacity-90 transition-opacity;
+    }
+
+    /* Desktop Navigation */
+    .navbar-desktop {
+        @apply hidden md:flex space-x-8;
+    }
+
+    /* Mobile Menu Button */
+    .navbar-mobile-button {
+        @apply p-2 rounded-full text-dark dark:text-light hover:bg-light-darker dark:hover:bg-dark-lighter transition-colors;
+    }
+
+    /* Mobile Navigation */
+    .navbar-mobile {
+        @apply md:hidden fixed inset-0 bg-light/95 dark:bg-dark/95 backdrop-blur-lg z-40 transition-all duration-300 ease-in-out;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        top: 68px; /* Height of navbar */
+        height: calc(100vh - 68px);
+    }
+
+    .navbar-mobile.open {
+        @apply opacity-100;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .navbar-mobile-nav {
+        @apply h-full flex flex-col items-center justify-center space-y-8;
+    }
+
+    /* Shared Navigation Links */
+    .navbar-link {
+        @apply text-dark dark:text-light hover:text-primary dark:hover:text-primary-dark transition-colors cursor-pointer text-lg font-medium relative py-2 px-4;
+    }
+
+    .navbar-link:hover::before {
+        @apply scale-x-100;
+    }
+
+    .navbar-link::before {
+        @apply content-[''] absolute bottom-0 left-0 w-full h-0.5 bg-primary dark:bg-primary-dark transition-transform duration-300 origin-left;
+        transform: scaleX(0);
+    }
+
+    .navbar-link.active {
+        @apply text-primary dark:text-primary-dark;
+    }
+
+    .navbar-link.active::before {
+        @apply scale-x-100;
+    }
+
+    /* Action Buttons */
+    .navbar-actions {
+        @apply flex items-center space-x-4;
+    }
+
+    .navbar-theme-toggle {
+        @apply p-2 rounded-full bg-light dark:bg-dark text-dark dark:text-light hover:bg-light-darker dark:hover:bg-dark-lighter transition-colors;
+    }
+
+    .navbar-resume {
+        @apply px-4 py-2 bg-primary dark:bg-primary-dark text-white rounded-md hover:bg-primary-dark dark:hover:bg-primary transition-colors hover:shadow-lg hover:shadow-primary/20 dark:hover:shadow-primary-dark/20;
+    }
+
+    /* Mobile Menu Animations */
+    .navbar-mobile .navbar-link {
+        @apply opacity-0 translate-y-4 transition-all duration-300 ease-out;
+    }
+
+    .navbar-mobile.open .navbar-link {
+        @apply opacity-100 translate-y-0;
+    }
+
+    /* Staggered animations for mobile menu items */
+    .navbar-mobile.open .navbar-link:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+    .navbar-mobile.open .navbar-link:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+    .navbar-mobile.open .navbar-link:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+    .navbar-mobile.open .navbar-link:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+    .hero-bg-element {
+    @apply absolute rounded-full opacity-0;
+    animation: float 15s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    .hero-content {
+    @apply bg-light/80 dark:bg-dark/80 backdrop-blur-sm;
+   }
+
+  /* Social icons hover effect */
+  .social-icon {
+    @apply transition-all duration-300 hover:text-primary dark:hover:text-primary-dark;
+  }
+}
+
+
+/* .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.dark .bg-grid-pattern-dark {
+  background-image: 
+    linear-gradient(to right, #374151 1px, transparent 1px),
+    linear-gradient(to bottom, #374151 1px, transparent 1px);
+  background-size: 40px 40px;
+} */
+
+/* Grid pattern - black in light mode, light in dark mode */
+.bg-grid-light {
+  background-image: 
+    linear-gradient(to right, #000 1px, transparent 1px),
+    linear-gradient(to bottom, #000 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.dark .bg-grid-dark {
+  background-image: 
+    linear-gradient(to right, #fff 1px, transparent 1px),
+    linear-gradient(to bottom, #fff 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Floating elements optimization */
+.floating-tech {
+  will-change: transform;
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Better selection colors */
+::selection {
+    background: theme('colors.primary.DEFAULT');
+    color: white;
+}
+
+.dark ::selection {
+    background: theme('colors.primary.dark');
+}
+
+/* Smooth transitions for theme changes */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: theme('colors.light.DEFAULT');
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: theme('colors.dark.DEFAULT');
+}
+
+::-webkit-scrollbar-thumb {
+    background: theme('colors.primary.DEFAULT');
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: theme('colors.primary.dark');
+}
