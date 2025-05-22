@@ -80,10 +80,10 @@ export const projects = [
     title: "E-commerce Platform",
     description: " Developed a full-stack e-commerce platform with an integrated AI chatbot for order tracking, returns, and product recommendations. Built with React, NestJS, and PostgreSQL, featuring JWT auth, responsive UI, and Microsoft Copilot Studio for chatbot automation",
     technologies: ["React", "NestJS", "PostgreSQL", "Tailwind CSS","Docker","Microsoft Ai Agent"],
-    link: "#",
+    link: "https://github.com/dhia2223/ecommerce-chatbot.git",
     image: ecommerceimg,
   },
-{
+  {
     title: "E-commerce Platform Trendora",
     description: "Developed a responsive e-commerce platform for a virtual personal training service. The platform facilitates fitness journeys by offering a curated selection of physical and digital products alongside online training programs.",
     technologies: ["React", "NestJS", "PostgreSQL", "Tailwind CSS"],
@@ -97,7 +97,7 @@ export const projects = [
     link: "#",
     image: smartcarimg,
   },
-{
+  {
     title: "Coachify Web Application",
     description: "Developed a user-friendly interface for a first aid application, integrating UI/UX design principles with HTML, CSS, and JavaScript. Focused on intuitive navigation, clear instructions, and interactive elements to enhance usability and accessibility in emergency situations.",
     technologies: ["UI/UX", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
