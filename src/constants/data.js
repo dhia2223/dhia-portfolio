@@ -117,7 +117,7 @@ export const experience = [
   {
     role: "Summer Intern",
     company: "PROXYM-IT Sousse",
-    period: "Summer 2023",
+    period: "JULY - SEPTEMBER 2024",
     description: [
       "Developed a Holiday Management Web Application with role-based dynamic dashboard navigation (HR, Manager, Employer)",
       "Implemented real-time request and approval system with status tracking",
@@ -127,8 +127,8 @@ export const experience = [
   },
   {
     role: "END OF STUDY PROJECT",
-    company: "Proxym-it Sousse",
-    period: " FEBRUARY- JUNE  2023",
+    company: "ISSAT Sousse",
+    period: " FEBRUARY - JUNE  2023",
     description: [
       " Developed an innovative smart security car system using advanced artificial intelligence techniques in conjunction with a Raspberry Pi 4.",
       " Successfully implemented real-time face detection, recognition, and emotions recognition capabilities, providing personalized security features for authorized drivers.",
