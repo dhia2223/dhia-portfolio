@@ -10,7 +10,7 @@ export const personalData = {
   title: "Software Engineer",
   description: "Second-year Software Engineering student with a passion for applying technical knowledge to solve problems and build innovative solutions. Eager to learn and contribute to a collaborative development environment.",
   image: profileimg,
-  resumeLink: "#", // Add your resume link here
+  resumeLink: "https://drive.google.com/file/d/1R2a4BHpg0LoT-dMrMjF_S1fpgFoSpVfH/view?usp=sharing", // Add your resume link here
   socialLinks: {
     github: "https://github.com/dhia2223?tab=repositories",
     linkedin: "https://www.linkedin.com/in/dhia-haj-kacem/",
@@ -116,7 +116,7 @@ export const projects = [
 export const experience = [
   {
     role: "Summer Intern",
-    company: "Prox",
+    company: "PROXYM-IT Sousse",
     period: "Summer 2023",
     description: [
       "Developed a Holiday Management Web Application with role-based dynamic dashboard navigation (HR, Manager, Employer)",
@@ -124,6 +124,19 @@ export const experience = [
       "Created secure JWT-based authentication with frontend token management",
     ],
     technologies: ["ReactJS", "NestJS", "MongoDB"],
+  },
+  {
+    role: "END OF STUDY PROJECT",
+    company: "Proxym-it Sousse",
+    period: " FEBRUARY- JUNE  2023",
+    description: [
+      " Developed an innovative smart security car system using advanced artificial intelligence techniques in conjunction with a Raspberry Pi 4.",
+      " Successfully implemented real-time face detection, recognition, and emotions recognition capabilities, providing personalized security features for authorized drivers.",
+      " Created a user-friendly mobile app interface to control and monitor the car system, improving the overall driving experience.",
+      " Integrated Firebase services to facilitate seamless communication between the Raspberry Pi and the mobile app.",
+      " Demonstrated effective project management skills by completing the project within the designated timeframe.",
+    ],
+    technologies: ["Python", "Flutter", "Firebase", "Raspberry Pi", "OpenCV", "TensorFlow","Machine Learning","Project Management"],
   },
   // Add more experiences as needed
 ];
