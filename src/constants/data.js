@@ -78,8 +78,8 @@ export const projects = [
 
   {
     title: "E-commerce Platform",
-    description: " Developed a full-stack e-commerce platform with an integrated AI chatbot for order tracking, returns, and product recommendations. Built with React, NestJS, and PostgreSQL, featuring JWT auth, responsive UI, and Microsoft Copilot Studio for chatbot automation",
-    technologies: ["React", "NestJS", "PostgreSQL", "Tailwind CSS","Docker","Microsoft Ai Agent"],
+    description: " Developed a full-stack e-commerce platform with an integrated AI chatbot for order tracking, returns, and product recommendations. Built with React, NestJS, and PostgreSQL, featuring JWT auth, responsive UI, and Microsoft Copilot Studio for chatbot automation.",
+    technologies: ["React", "NestJS", "PostgreSQL", "Tailwind CSS","Docker","Copilot Studio"],
     link: "https://github.com/dhia2223/ecommerce-chatbot.git",
     image: ecommerceimg,
   },
