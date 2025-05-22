@@ -78,8 +78,8 @@ export const projects = [
 
   {
     title: "E-commerce Platform",
-    description: "Developed a responsive e-commerce platform for a virtual personal training service. The platform facilitates fitness journeys by offering a curated selection of physical and digital products alongside online training programs.",
-    technologies: ["React", "NestJS", "PostgreSQL", "Tailwind CSS"],
+    description: " Developed a full-stack e-commerce platform with an integrated AI chatbot for order tracking, returns, and product recommendations. Built with React, NestJS, and PostgreSQL, featuring JWT auth, responsive UI, and Microsoft Copilot Studio for chatbot automation",
+    technologies: ["React", "NestJS", "PostgreSQL", "Tailwind CSS","Docker","Microsoft Ai Agent"],
     link: "#",
     image: ecommerceimg,
   },
