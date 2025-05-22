@@ -84,9 +84,9 @@ export const projects = [
     image: ecommerceimg,
   },
   {
-    title: "E-commerce Platform Trendora",
-    description: "Developed a responsive e-commerce platform for a virtual personal training service. The platform facilitates fitness journeys by offering a curated selection of physical and digital products alongside online training programs.",
-    technologies: ["React", "NestJS", "PostgreSQL", "Tailwind CSS"],
+    title: "Trendora Trend Online Store",
+    description: "Developed a fully functional e-commerce website using WordPress, WooCommerce, and Elementor. The store offers a curated selection of fashion and lifestyle products, providing a smooth shopping experience with responsive design, integrated payment options, and customizable product listings.",
+    technologies: ["WordPress", "WooCommerce", "Elementor", "UI/UX", "Plugins", "CSS"],
     link: "https://trendoratrend.ct.ws/",
     image: trendoraimg,
   },
