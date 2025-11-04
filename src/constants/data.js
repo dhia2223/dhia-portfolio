@@ -4,6 +4,8 @@ import coachifyimg from "../assets/coachify.png";
 import trendoraimg from "../assets/TRENDORA.png";
 import smartcarimg from "../assets/smartcar.png";
 import firstaidimg from "../assets/FirstAid.png";
+import Fintrackimg from "../assets/Fintrack.png";
+import AIagentimg from "../assets/AIagent.png";
 
 export const personalData = {
   name: "Dhia",
@@ -118,15 +120,15 @@ export const projects = [
     title: "Coachify Web Application",
     description: " Developed a responsive e-commerce platform for a virtual personal training service. The platform facilitates fitness journeys by offering a curated selection of physical and digital products alongside online training programs.",
     technologies: ["UI/UX", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    link: "#", // Add project link here
-    image: coachifyimg, // Add project image path
+    link: "#", 
+    image: coachifyimg, 
   },
   {
     title: "First Aid Web Application",
     description: "Developed a user-friendly interface for a first aid application, integrating UI/UX design principles with HTML, CSS, and JavaScript. Focused on intuitive navigation, clear instructions, and interactive elements to enhance usability and accessibility in emergency situations.",
     technologies: ["UI/UX", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    link: "#", // Add project link here
-    image: firstaidimg, // Add project image path
+    link: "#", 
+    image: firstaidimg, 
   },
 
 ];
@@ -168,5 +170,4 @@ export const experience = [
     ],
     technologies: ["Python", "Flutter", "Firebase", "Raspberry Pi", "OpenCV", "TensorFlow","Machine Learning","Project Management"],
   },
-  // Add more experiences as needed
 ];
