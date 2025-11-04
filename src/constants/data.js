@@ -84,7 +84,7 @@ export const projects = [
     description: "FinTrack is a modern, full-stack personal finance platform designed to help users manage their money with clarity and control. It provides a clean and intuitive interface for tracking expenses, income, accounts, categories, and financial activity — supported by a robust Spring Boot backend and a responsive React + Tailwind UI.",
     technologies: ["Spring Boot", "React", "TypeScript", "Postgres", "Docker"],
     link: "https://github.com/dhia2223/Fintrack.git",
-    image: fintrackimg, 
+    image: Fintrackimg, 
   },
   {
     title: " AI Agent Platform",
