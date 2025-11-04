@@ -8,9 +8,9 @@ import firstaidimg from "../assets/FirstAid.png";
 export const personalData = {
   name: "Dhia",
   title: "Software Engineer",
-  description: "Second-year Software Engineering student with a passion for applying technical knowledge to solve problems and build innovative solutions. Eager to learn and contribute to a collaborative development environment.",
+  description: "Third-year Software Engineering student with a passion for applying technical knowledge to solve problems and build innovative solutions. Eager to learn and contribute to a collaborative development environment.",
   image: profileimg,
-  resumeLink: "https://drive.google.com/file/d/1R2a4BHpg0LoT-dMrMjF_S1fpgFoSpVfH/view?usp=sharing", // Add your resume link here
+  resumeLink: "https://drive.google.com/file/d/1R2a4BHpg0LoT-dMrMjF_S1fpgFoSpVfH/view?usp=sharing", 
   socialLinks: {
     github: "https://github.com/dhia2223?tab=repositories",
     linkedin: "https://www.linkedin.com/in/dhia-haj-kacem/",
@@ -27,6 +27,9 @@ export const skills = [
   { name: "HTML", icon: "logos:html-5" },
   { name: "CSS", icon: "logos:css-3" },
   { name: "JavaScript", icon: "logos:javascript" },
+  { name: "TypeScript", icon: "logos:typescript-icon" },
+  { name: "Docker", icon: "logos:docker-icon" },
+  { name: "Spring Boot", icon: "logos:spring-boot"},
   { name: "MySQL", icon: "logos:mysql" },
   { name: "PHP", icon: "logos:php" },
   { name: "Java", icon: "logos:java" },
@@ -77,6 +80,20 @@ export const education = [
 export const projects = [
 
   {
+    title: "FinTrack – Personal Finance Platform",
+    description: "FinTrack is a modern, full-stack personal finance platform designed to help users manage their money with clarity and control. It provides a clean and intuitive interface for tracking expenses, income, accounts, categories, and financial activity — supported by a robust Spring Boot backend and a responsive React + Tailwind UI.",
+    technologies: ["Spring Boot", "React", "TypeScript", "Postgres", "Docker"],
+    link: "https://github.com/dhia2223/Fintrack.git",
+    image: fintrackimg, 
+  },
+  {
+    title: " AI Agent Platform",
+    description: "This project is a multi-tenant AI agent platform that allows users to build, configure, and deploy custom AI-powered chat agents capable of answering queries based strictly on the user's provided data. Users can upload documents (PDF, Word, TXT, etc.), connect structured databases, and provide specific agent instructions (prompts).",
+    technologies: ["FastAPI", "ReactTS", "LangChain", "PostgreSQL", "Docker", "LLaMA 3"],
+    link: "https://github.com/dhia2223/AI-agent-platform.git",
+    image: AIagentimg,
+  },
+  {
     title: "E-commerce Platform",
     description: " Developed a full-stack e-commerce platform with an integrated AI chatbot for order tracking, returns, and product recommendations. Built with React, NestJS, and PostgreSQL, featuring JWT auth, responsive UI, and Microsoft Copilot Studio for chatbot automation.",
     technologies: ["React", "NestJS", "PostgreSQL", "Tailwind CSS","Docker","Copilot Studio"],
@@ -111,9 +128,22 @@ export const projects = [
     link: "#", // Add project link here
     image: firstaidimg, // Add project image path
   },
+
 ];
 
 export const experience = [
+  {
+    role: "Summer Intern",
+    company: "PROXYM-IT Sousse",
+    period: "JUNE - AUGUST 2025",
+    description: [
+      "Developed a multi-tenant AI agent platform that allows users to build, configure, and deploy custom AI-powered chat agents capable of answering queries based strictly on the user's provided data. Users can upload documents (PDF, Word, TXT, etc.), connect structured databases, and provide specific agent instructions (prompts). ",
+      "Implemented secure user authentication and authorization using JWT tokens, ensuring data privacy and access control across multiple tenants.",
+      "Designed and developed a dynamic React TypeScript frontend with role-based access control, allowing users to manage their agents, view analytics, and interact with deployed chat agents seamlessly.",
+      "Integrated LangChain for advanced language model interactions, PostgreSQL for robust data storage, and Docker for containerized deployment, ensuring scalability and maintainability of the platform.",
+    ],
+    technologies: ["FastAPI", "ReactTS", "LangChain", "PostgreSQL", "Docker", "LLaMA 3"],
+  },
   {
     role: "Summer Intern",
     company: "PROXYM-IT Sousse",
