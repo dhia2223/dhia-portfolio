@@ -1,9 +1,119 @@
+import React from 'react';
 import { Icon } from '@iconify/react';
 import { personalData } from '../constants/data';
 import { motion } from 'framer-motion';
-import { useCallback } from 'react';
+import { useCallback, useState, useEffect, useMemo } from 'react';
+
+// Memoized floating icons component to prevent re-renders
+const FloatingTechIcons = React.memo(({ techIcons }) => {
+  return (
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      {techIcons.map((tech, i) => {
+        const duration = 40 + Math.random() * 30;
+        const delay = Math.random() * 10;
+        const size = 30 + Math.random() * 40;
+        const startX = Math.random() * 100;
+        const startY = Math.random() * 100;
+        
+        return (
+          <motion.div
+            key={`${tech}-${i}`}
+            className="absolute z-0"
+            style={{
+              width: `${size}px`,
+              height: `${size}px`,
+              left: `${startX}%`,
+              top: `${startY}%`,
+            }}
+            initial={{ 
+              opacity: 0,
+              scale: 0.8
+            }}
+            animate={{
+              x: [0, 100, -50, 0],
+              y: [0, -80, 60, 0],
+              rotate: [0, 180, 360],
+              opacity: [0, 0.3, 0.3, 0],
+              scale: [0.8, 1, 1, 0.8]
+            }}
+            transition={{
+              duration: duration,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: delay
+            }}
+          >
+            <Icon 
+              icon={tech} 
+              className="w-full h-full text-dark/20 dark:text-light/20"
+            />
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+});
+
+FloatingTechIcons.displayName = 'FloatingTechIcons';
 
 export default function Hero() {
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [displayedTitle, setDisplayedTitle] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  // Titles to cycle through
+  const titles = personalData.titles;
+
+  // Tech icons for floating background - defined outside component to prevent re-renders
+  const techIcons = useMemo(() => [
+    'vscode-icons:file-type-reactjs',
+    'logos:javascript',
+    'logos:typescript-icon',
+    'logos:nodejs-icon',
+    'logos:python',
+    'logos:html-5',
+    'logos:css-3',
+    'logos:git-icon',
+    'logos:docker-icon',
+    'logos:graphql',
+    'logos:redux',
+    'logos:tailwindcss-icon',
+    'logos:nextjs-icon',
+    'logos:mongodb-icon',
+    'logos:postgresql'
+  ], []);
+
+  // Typing animation effect - optimized with useCallback
+  useEffect(() => {
+    const currentTitle = titles[currentTitleIndex];
+    
+    if (!isDeleting && displayedTitle === currentTitle) {
+      // Pause before deleting
+      const pauseTimer = setTimeout(() => setIsDeleting(true), 2000);
+      return () => clearTimeout(pauseTimer);
+    }
+    
+    if (isDeleting && displayedTitle === '') {
+      // Move to next title after deleting
+      setIsDeleting(false);
+      setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+      setTypingSpeed(150);
+      return;
+    }
+
+    const typingTimer = setTimeout(() => {
+      if (isDeleting) {
+        setDisplayedTitle(currentTitle.substring(0, displayedTitle.length - 1));
+        setTypingSpeed(100);
+      } else {
+        setDisplayedTitle(currentTitle.substring(0, displayedTitle.length + 1));
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(typingTimer);
+  }, [displayedTitle, isDeleting, currentTitleIndex, titles, typingSpeed]);
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -35,68 +145,15 @@ export default function Hero() {
     { icon: "mdi:email", link: personalData.socialLinks.email, label: "Email" }
   ];
 
-  // Tech icons for floating background
-  const techIcons = [
-    'vscode-icons:file-type-reactjs',
-    'logos:javascript',
-    'logos:typescript-icon',
-    'logos:nodejs-icon',
-    'logos:python',
-    'logos:html-5',
-    'logos:css-3',
-    'logos:git-icon',
-    'logos:docker-icon',
-    'logos:graphql',
-    'logos:redux',
-    'logos:tailwindcss-icon',
-    'logos:nextjs-icon',
-    'logos:mongodb-icon',
-    'logos:postgresql'
-  ];
-
   return (
-    <section id="home" className="min-h-[100vh] flex items-center relative overflow-hidden">
+    <section id="home" className="min-h-[100vh] flex items-center relative overflow-hidden bg-light dark:bg-dark">
       {/* Dynamic Grid Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-grid-light dark:bg-grid-dark opacity-10"></div>
       </div>
 
-      {/* Floating Tech Icons - Background */}
-      {techIcons.map((tech, i) => {
-        // Random positions and timing
-        const duration = 40 + Math.random() * 30;
-        const delay = Math.random() * 10;
-        const size = 40 + Math.random() * 30;
-        const opacity = 0.2 + Math.random() * 0.3;
-        
-        return (
-          <motion.div
-            key={`${tech}-${i}`}
-            className="absolute text-dark/30 dark:text-light/30 z-0"
-            style={{
-              width: `${size}px`,
-              height: `${size}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              opacity: 0
-            }}
-            animate={{
-              x: [0, Math.random() * 200 - 100, Math.random() * 200 - 100, 0],
-              y: [0, Math.random() * 200 - 100, Math.random() * 200 - 100, 0],
-              rotate: [0, Math.random() * 360],
-              opacity: [0, opacity, opacity, 0]
-            }}
-            transition={{
-              duration: duration,
-              repeat: Infinity,
-              ease: "linear",
-              delay: delay
-            }}
-          >
-            <Icon icon={tech} className="w-full h-full" />
-          </motion.div>
-        );
-      })}
+      {/* Floating Tech Icons - Memoized to prevent re-renders */}
+      <FloatingTechIcons techIcons={techIcons} />
       
       {/* Content */}
       <motion.div 
@@ -120,7 +177,7 @@ export default function Hero() {
           
           <motion.h2 
             variants={itemVariants}
-            className="text-2xl md:text-3xl mb-6 text-dark dark:text-light flex items-center"
+            className="text-2xl md:text-3xl mb-6 text-dark dark:text-light flex items-center min-h-[3rem]"
           >
             <motion.span
               animate={{ 
@@ -134,16 +191,25 @@ export default function Hero() {
             >
               👋
             </motion.span>
-            <span className="ml-2">{personalData.title}</span>
+            <span className="ml-2 font-mono bg-gradient-to-r text-dark dark:text-light">
+              {displayedTitle}
+              <motion.span
+                animate={{ opacity: [1, 0] }}
+                transition={{ duration: 0.5, repeat: Infinity }}
+                className="ml-1"
+              >
+                |
+              </motion.span>
+            </span>
           </motion.h2>
           
           <motion.p 
             variants={itemVariants}
-            className="text-lg mb-8 text-dark-lighter dark:text-light-darker max-w-lg relative"
+            className="text-lg mb-8 text-dark-lighter dark:text-light-darker max-w-lg leading-relaxed text-justify relative pl-6 "
           >
             {personalData.description}
             <motion.span 
-              className="absolute -left-6 top-0 text-primary dark:text-primary-dark"
+              className="absolute left-0 top-0 text-primary dark:text-primary-dark"
               animate={{ opacity: [0, 1, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
@@ -252,3 +318,6 @@ export default function Hero() {
     </section>
   );
 }
+
+
+

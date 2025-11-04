@@ -51,7 +51,7 @@ const skillCategories = [
     title: "Design",
     icon: "ph:paint-brush-bold",
     items: skills.filter(skill => 
-      ['UI/UX Design'].includes(skill.name)
+      ['Adobe XD', 'Figma', 'Adobe Photoshop'].includes(skill.name)
     )
   }
 ];

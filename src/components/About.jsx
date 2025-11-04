@@ -155,19 +155,19 @@ export default function About() {
                 <div className="flex">
                   <div className="mr-4 text-primary dark:text-primary-dark font-bold">2+</div>
                   <div>
-                    <h5 className="font-medium text-dark dark:text-light">Years of Experience</h5>
+                    <h5 className="font-medium text-dark dark:text-light">Internships</h5>
                     <p className="text-sm text-dark-lighter dark:text-light-darker">Building web applications</p>
                   </div>
                 </div>
                 <div className="flex">
-                  <div className="mr-4 text-primary dark:text-primary-dark font-bold">10+</div>
+                  <div className="mr-4 text-primary dark:text-primary-dark font-bold">5+</div>
                   <div>
                     <h5 className="font-medium text-dark dark:text-light">Projects Completed</h5>
                     <p className="text-sm text-dark-lighter dark:text-light-darker">Across various domains</p>
                   </div>
                 </div>
                 <div className="flex">
-                  <div className="mr-4 text-primary dark:text-primary-dark font-bold">5+</div>
+                  <div className="mr-4 text-primary dark:text-primary-dark font-bold">10+</div>
                   <div>
                     <h5 className="font-medium text-dark dark:text-light">Technologies</h5>
                     <p className="text-sm text-dark-lighter dark:text-light-darker">In my primary stack</p>

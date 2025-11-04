@@ -91,7 +91,7 @@ export default function Projects() {
                 </div>
                 <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-bold mb-2 text-dark dark:text-light">{project.title}</h3>
-                  <p className="text-dark-lighter dark:text-light-darker mb-4 flex-grow">{project.description}</p>
+                  <p className="text-dark-lighter dark:text-light-darker mb-4 flex-grow text-justify">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, techIndex) => (
                       <span

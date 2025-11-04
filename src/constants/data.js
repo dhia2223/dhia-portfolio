@@ -9,17 +9,21 @@ import AIagentimg from "../assets/AIagent.png";
 
 export const personalData = {
   name: "Dhia",
-  title: "Software Engineer", 
+  titles : [
+    "Software Engineer",
+    "Full Stack Developer", 
+    "DevOps Enthusiast",
+  ],
   description: "Third-year Software Engineering student with a passion for applying technical knowledge to solve problems and build innovative solutions. Eager to learn and contribute to a collaborative development environment.",
   image: profileimg,
-  resumeLink: "https://drive.google.com/file/d/1R2a4BHpg0LoT-dMrMjF_S1fpgFoSpVfH/view?usp=sharing", 
+  resumeLink: "https://drive.google.com/file/d/1lVmYdjpep2LqzYLS73cx4KtJS7DOQJfr/view?usp=drive_link", 
   socialLinks: {
     github: "https://github.com/dhia2223?tab=repositories",
     linkedin: "https://www.linkedin.com/in/dhia-haj-kacem/",
-    twitter: "#",
     email: "mailto:Hajkacemdhia@gmail.com",
   }
 };
+
 
 export const skills = [
   { name: "Python", icon: "logos:python" },
@@ -31,7 +35,7 @@ export const skills = [
   { name: "JavaScript", icon: "logos:javascript" },
   { name: "TypeScript", icon: "logos:typescript-icon" },
   { name: "Docker", icon: "logos:docker-icon" },
-  { name: "Spring Boot", icon: "logos:spring-boot"},
+  { name: "Spring Boot", icon: "logos:spring-boot" },
   { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
   { name: "Hadoop", icon: "logos:hadoop" },
   { name: "Spark", icon: "logos:apache-spark" },
@@ -47,10 +51,13 @@ export const skills = [
   { name: "Linux", icon: "logos:linux-tux" },
   { name: "Windows", icon: "logos:windows" },
   { name: "Raspberry Pi", icon: "logos:raspberry-pi" },
-  { name: "CI/CD", icon: "logos:cicd" },
+  { name: "CI/CD", icon: "logos:ci-cd" },
   { name: "GitHub Actions", icon: "logos:github-actions" },
   { name: "Azure", icon: "logos:microsoft-azure" },
-  { name: "UI/UX Design", icon: "logos:adobe-xd" },
+  { name: "Adobe XD", icon: "logos:adobe-xd" },
+  { name: "Figma", icon: "logos:figma" },
+  { name: "Adobe Photoshop", icon: "logos:adobe-photoshop" },
+
 ];
 
 export const languages = [
@@ -97,7 +104,7 @@ export const projects = [
   {
     title: "FinTrack – Personal Finance Platform",
     description: "FinTrack is a modern, full-stack personal finance platform designed to help users manage their money with clarity and control. It provides a clean and intuitive interface for tracking expenses, income, accounts, categories, and financial activity — supported by a robust Spring Boot backend and a responsive React + Tailwind UI.",
-    technologies: ["Spring Boot", "ReactTS", "TypeScript", "Postgres", "Docker",  "Tailwind CSS"],
+    technologies: ["Spring Boot", "ReactTS", "TypeScript", "PostgreSQL", "Docker",  "Tailwind CSS"],
     link: "https://github.com/dhia2223/Fintrack.git",
     image: Fintrackimg, 
   },
