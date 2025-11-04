@@ -32,7 +32,6 @@ export default function Hero() {
   const socialIcons = [
     { icon: "mdi:github", link: personalData.socialLinks.github, label: "GitHub" },
     { icon: "mdi:linkedin", link: personalData.socialLinks.linkedin, label: "LinkedIn" },
-    { icon: "mdi:twitter", link: personalData.socialLinks.twitter, label: "Twitter" },
     { icon: "mdi:email", link: personalData.socialLinks.email, label: "Email" }
   ];
 

@@ -16,21 +16,21 @@ const skillCategories = [
     title: "Web Development",
     icon: "ph:globe-stand-bold",
     items: skills.filter(skill => 
-      ['ReactTS', 'NestJS','Spring boot', 'Tailwind CSS' , 'JavaScript', 'PHP', 'MySQL', 'Postgre SQL'].includes(skill.name)
+      ['ReactTS', 'NestJS','Spring Boot', 'Tailwind CSS' , 'JavaScript', 'PHP', 'MySQL', 'Postgre SQL'].includes(skill.name)
     )
   },
   {
     title: "AI & Computer Vision",
     icon: "ph:brain-bold",
     items: skills.filter(skill => 
-      ['Machine Learning' , 'Classification & Regression', 'Pandas', 'TensorFlow', 'Computer Vision'].includes(skill.name)
+      ['Machine Learning' , 'Classification & Regression', 'TensorFlow', 'Computer Vision'].includes(skill.name)
     )
   },
   {
-    title: "DevOps ",
+    title: "DevOps & Cloud",
     icon: "ph:cloud-bold",
     items: skills.filter(skill => 
-      ['Docker','kubernetes', 'CI/CD', 'GitHub Actions'].includes(skill.name)
+      ['Docker','kubernetes', 'CI/CD', 'GitHub Actions','Azure'].includes(skill.name)
     )
   },
   {
@@ -107,43 +107,7 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Languages Section
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-16"
-        >
-          <h3 className="text-2xl font-bold mb-6 text-center text-dark dark:text-light">
-            <span className="text-primary dark:text-primary-dark">Languages</span> I Speak
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {languages.map((lang, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-light dark:bg-dark-light p-4 rounded-lg"
-              >
-                <div className="flex justify-between items-center mb-2">
-                  <span className="font-medium text-dark dark:text-light">{lang.name}</span>
-                  <span className="text-sm text-primary dark:text-primary-dark">{lang.level}</span>
-                </div>
-                <div className="w-full bg-light-darker dark:bg-dark-lighter rounded-full h-2">
-                  <div
-                    className="bg-primary dark:bg-primary-dark h-2 rounded-full"
-                    style={{
-                      width: lang.level === 'Proficient' ? '90%' : lang.level === 'Beginner' ? '30%' : '60%',
-                    }}
-                  ></div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div> */}
+        
       </div>
     </AnimatedSection>
   );
