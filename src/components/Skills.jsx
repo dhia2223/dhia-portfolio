@@ -39,7 +39,7 @@ const skillCategories = [
     items: skills.filter(skill => 
       ['Hadoop', 'Spark'].includes(skill.name)
     )
-  }
+  },
   {
     title: "Systems & Tools",
     icon: "ph:terminal-window-bold",
