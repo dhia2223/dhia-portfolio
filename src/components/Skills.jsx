@@ -16,21 +16,35 @@ const skillCategories = [
     title: "Web Development",
     icon: "ph:globe-stand-bold",
     items: skills.filter(skill => 
-      ['ReactJS', 'NestJS', 'HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'].includes(skill.name)
+      ['ReactTS', 'NestJS','Spring boot', 'Tailwind CSS' , 'JavaScript', 'PHP', 'MySQL', 'Postgre SQL'].includes(skill.name)
     )
   },
   {
     title: "AI & Computer Vision",
     icon: "ph:brain-bold",
     items: skills.filter(skill => 
-      ['TensorFlow', 'Computer Vision'].includes(skill.name)
+      ['Machine Learning' , 'Classification & Regression', 'Pandas', 'TensorFlow', 'Computer Vision'].includes(skill.name)
     )
   },
+  {
+    title: "DevOps ",
+    icon: "ph:cloud-bold",
+    items: skills.filter(skill => 
+      ['Docker','kubernetes', 'CI/CD', 'GitHub Actions'].includes(skill.name)
+    )
+  },
+  {
+    title: "Big Data",
+    icon: "ph:database-bold",
+    items: skills.filter(skill => 
+      ['Hadoop', 'Spark'].includes(skill.name)
+    )
+  }
   {
     title: "Systems & Tools",
     icon: "ph:terminal-window-bold",
     items: skills.filter(skill => 
-      ['Linux'].includes(skill.name)
+      ['Windows','Linux', 'Raspberry Pi' ,''].includes(skill.name)
     )
   },
   {

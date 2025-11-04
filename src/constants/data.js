@@ -9,7 +9,7 @@ import AIagentimg from "../assets/AIagent.png";
 
 export const personalData = {
   name: "Dhia",
-  title: "Software Engineer",
+  title: "Software Engineer", 
   description: "Third-year Software Engineering student with a passion for applying technical knowledge to solve problems and build innovative solutions. Eager to learn and contribute to a collaborative development environment.",
   image: profileimg,
   resumeLink: "https://drive.google.com/file/d/1R2a4BHpg0LoT-dMrMjF_S1fpgFoSpVfH/view?usp=sharing", 
@@ -84,14 +84,14 @@ export const projects = [
   {
     title: "FinTrack – Personal Finance Platform",
     description: "FinTrack is a modern, full-stack personal finance platform designed to help users manage their money with clarity and control. It provides a clean and intuitive interface for tracking expenses, income, accounts, categories, and financial activity — supported by a robust Spring Boot backend and a responsive React + Tailwind UI.",
-    technologies: ["Spring Boot", "React", "TypeScript", "Postgres", "Docker"],
+    technologies: ["Spring Boot", "ReactTS", "TypeScript", "Postgres", "Docker",  "Tailwind CSS"],
     link: "https://github.com/dhia2223/Fintrack.git",
     image: Fintrackimg, 
   },
   {
     title: " AI Agent Platform",
     description: "This project is a multi-tenant AI agent platform that allows users to build, configure, and deploy custom AI-powered chat agents capable of answering queries based strictly on the user's provided data. Users can upload documents (PDF, Word, TXT, etc.), connect structured databases, and provide specific agent instructions (prompts).",
-    technologies: ["FastAPI", "ReactTS", "LangChain", "PostgreSQL", "Docker", "LLaMA 3"],
+    technologies: ["FastAPI", "ReactTS", "LangChain", "PostgreSQL", "Docker", "LLaMA 3",  "Tailwind CSS", "TypeScript"],
     link: "https://github.com/dhia2223/AI-agent-platform.git",
     image: AIagentimg,
   },
@@ -113,7 +113,7 @@ export const projects = [
     title: "Smart Security Car System",
     description: "Developed an innovative smart security car system using advanced artificial intelligence techniques with Raspberry Pi 4. Implemented real-time face detection, recognition, and emotions recognition capabilities.",
     technologies: ["Python", "OpenCV", "Raspberry Pi", "Firebase"],
-    link: "#",
+    link: "https://www.linkedin.com/posts/dhia-haj-kacem_ai-technology-artificialintelligence-activity-7084981384452153344-8wPQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADpCoOoB30A6ga9PLUTzWmzF63td-Fw8rf8",
     image: smartcarimg,
   },
   {
